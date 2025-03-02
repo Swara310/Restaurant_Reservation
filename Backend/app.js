@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 // ✅ Correct CORS Configuration
 app.use(
   cors({
-    origin: "https://restaurant-reservation-nine.vercel.app/",
+    origin: "https://restaurant-reservation-git-main-swarali-patils-projects.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, 
     allowedHeaders: ["Content-Type", "Authorization"],
