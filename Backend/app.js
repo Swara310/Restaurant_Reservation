@@ -18,20 +18,13 @@ app.use(express.urlencoded({ extended: true }));
 // ✅ Correct CORS Configuration
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow frontend URL
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // ✅ Allow credentials (cookies, sessions)
+    credentials: true, 
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-
-//app.use(cors({
-  //  origin:[process.env.FRONTEND_UR],
-    //methods:["POST"],
-    //credentials:true,
-//})
-//);
 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
