@@ -10,6 +10,7 @@ import { ErrorMiddleware } from './middlewares/error.js';
 
 const app = express();
 dotenv.config({path: "./config/config.env"});
+dbConnection();
 
 
 app.use(express.json()); 
@@ -31,8 +32,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/reservation",reservationRoute);
 
-
-dbConnection();
 app.use(ErrorMiddleware);
 
 export default app;
